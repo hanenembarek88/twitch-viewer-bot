@@ -22,7 +22,7 @@ def get_options():
 def get_driver(options, proxy=""):
     options.add_argument(f"--proxy-server={proxy}")
     
-    options.add_argument(f"--user-data-dir=profile/{proxy.replace('.','_')}")
+    options.add_argument(f"--user-data-dir=profile/{proxy}")
     driver = webdriver.Chrome(options=options)
     driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
     "source":
@@ -65,10 +65,10 @@ def start(driver:webdriver.Chrome):
 
 
 def threader():
-    for i in range(len(get_proxies())):
+    for proxy in get_proxies():
         options = get_options()
-        driver = get_driver(options, '182.253.3.156:8080')
-        t = threading.Thread(target=start, args=(driver,), name=f'Deezer Bot {i}')
+        driver = get_driver(options, proxy)
+        t = threading.Thread(target=start, args=(driver,), name=f'Deezer Bot {proxy}')
         t.start()
 
 threader()
