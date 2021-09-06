@@ -1,5 +1,0 @@
-[152478:152478:0906/221353.013091:ERROR:sandbox_linux.cc(374)] InitializeSandbox() called with multiple threads in process gpu-process.
-[152446:152446:0906/221353.053163:WARNING:CONSOLE(0)] "The page delivered both an 'X-Frame-Options' header and a 'Content-Security-Policy' header with a 'frame-ancestors' directive. Although the 'X-Frame-Options' header alone would have blocked embedding, it has been ignored.", source: chrome-untrusted://new-tab-page/custom_background_image?url= (0)
-[152446:152446:0906/221353.631096:WARNING:CONSOLE(0)] "The page delivered both an 'X-Frame-Options' header and a 'Content-Security-Policy' header with a 'frame-ancestors' directive. Although the 'X-Frame-Options' header alone would have blocked embedding, it has been ignored.", source: chrome-untrusted://new-tab-page/one-google-bar?paramsencoded= (0)
-[152446:152446:0906/221353.729982:INFO:CONSOLE(7148)] "crbug/1173575, non-JS module files deprecated.", source: chrome-error://chromewebdata/ (7148)
-[152446:152446:0906/221400.370256:WARNING:pref_notifier_impl.cc(40)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
