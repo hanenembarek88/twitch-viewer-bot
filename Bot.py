@@ -22,7 +22,7 @@ def get_options():
 def get_driver(options, proxy=""):
     options.add_argument(f"--proxy-server={proxy}")
     
-    options.add_argument(f"--user-data-dir=profile/{proxy}")
+    options.add_argument(f"--user-data-dir=profile/{proxy.replace('.','_').replace(':','-')}")
     driver = webdriver.Chrome(options=options)
     driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
     "source":
