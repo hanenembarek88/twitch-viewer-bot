@@ -24,6 +24,7 @@ def get_options():
 
 def get_driver(options, proxy=""):
     options.add_argument(f"--proxy-server={proxy}")
+    options.add_argument(f'--remote-debugging-port={proxy.split(":")[-1]}') # Bypass OS security model
     
     options.add_argument(f"--user-data-dir=profile/{proxy.replace('.','_').replace(':','-')}")
     driver = webdriver.Chrome(options=options)
