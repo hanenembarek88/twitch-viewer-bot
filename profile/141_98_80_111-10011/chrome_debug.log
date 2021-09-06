@@ -1,0 +1,4 @@
+[143044:143044:0906/221024.940780:ERROR:sandbox_linux.cc(374)] InitializeSandbox() called with multiple threads in process gpu-process.
+[142976:142976:0906/221025.126891:WARNING:CONSOLE(0)] "The page delivered both an 'X-Frame-Options' header and a 'Content-Security-Policy' header with a 'frame-ancestors' directive. Although the 'X-Frame-Options' header alone would have blocked embedding, it has been ignored.", source: chrome-untrusted://new-tab-page/custom_background_image?url= (0)
+[142976:142976:0906/221025.757017:WARNING:CONSOLE(0)] "The page delivered both an 'X-Frame-Options' header and a 'Content-Security-Policy' header with a 'frame-ancestors' directive. Although the 'X-Frame-Options' header alone would have blocked embedding, it has been ignored.", source: chrome-untrusted://new-tab-page/one-google-bar?paramsencoded= (0)
+[142976:142976:0906/221041.214604:WARNING:pref_notifier_impl.cc(40)] Pref observer for media_router.cast_allow_all_ips found at shutdown.

@@ -1,10 +1,13 @@
 import os
 from selenium import webdriver
-import chromedriver_binary
 from selenium.webdriver.common.by import By
 import sys
 from time import sleep
 import threading
+
+import chromedriver_binary
+
+from url import channel
 
 def get_options():
     option = webdriver.ChromeOptions()
@@ -47,9 +50,7 @@ def get_proxies():
     return lines
 
 def start(driver:webdriver.Chrome):
-    options = get_options()
-    driver = get_driver(options, '182.253.3.156:8080')
-    driver.get("https://www.twitch.tv/ninjszn")
+    driver.get(channel)
     driver.implicitly_wait(15)
     time_last = '00:00:00'
     while True:
@@ -67,8 +68,7 @@ def start(driver:webdriver.Chrome):
 def threader():
     for proxy in get_proxies():
         options = get_options()
-        driver = get_driver(options, proxy)
-        t = threading.Thread(target=start, args=(driver,), name=f'Deezer Bot {proxy}')
+        t = threading.Thread(target=start, args=(get_driver(options, proxy),), name=f'Deezer Bot {proxy}')
         t.start()
 
 threader()
