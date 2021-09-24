@@ -1,1 +1,1 @@
-channel = 'https://www.twitch.tv/ninjszn'
+channel = 'https://www.twitch.tv/acie'
